@@ -20,6 +20,7 @@ module FormsLab
       params[:pirate][:ships].each do |details|
         Ship.new(details[:name], details[:type], details[:booty])
       end
+      binding.pry
       @ships = Ships.all
       erb :'pirates/show'
     end
